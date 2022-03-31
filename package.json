@@ -1,0 +1,13 @@
+{
+  "name": "flourish",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker compose -f docker-compose.yaml -f docker-compose.dev.yaml up",
+    "test": "docker compose -f docker-compose.yaml -f docker-compose.test.yaml up -d && docker exec -it test_api sh -c \"npm i && npm test\"",
+    "stop": "docker compose down --volumes --remove-orphans"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+[submodule "client"]
+	path = client
+	url = git@github.com:team-flourish/flourish-client.git
+	branch = staging
+[submodule "api"]
+	path = api
+	url = git@github.com:team-flourish/flourish-server.git
+	branch = staging

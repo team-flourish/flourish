@@ -1,0 +1,23 @@
+version: '3'
+services:
+  api:
+    container_name: dev_api
+    environment:
+      PG_CONN_STRING: postgresql://flourish:password@db:5432/flourish_db
+      PORT: 5000
+    depends_on:
+      - db
+    ports:
+      - 5000:5000
+    command: bash -c "pip install pipenv && pipenv install --system --dev && pipenv run dev"
+  db:
+    container_name: dev_db
+    environment:
+      POSTGRES_DB: flourish_db
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+volumes:
+  dbdata:
+networks:
+  default:
+    name: dev

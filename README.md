@@ -26,7 +26,8 @@ More information about the project can be found [here](https://gist.github.com/r
 
 ### Architecture
 
-<!-- to-do -->
+* [Container Level Diagram](assets/sysarch/container_level.png)
+* [Component Level Diagram](assets/sysarch/component_level.png)
 
 ### Technologies
 

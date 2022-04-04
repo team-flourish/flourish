@@ -1,0 +1,17 @@
+version: '3'
+services:
+  api:
+    image: python:3.9.1
+    volumes:
+      - type: bind
+        source: ./api
+        target: /code
+    working_dir: /code
+  db:
+    image: postgres:latest
+    user: postgres
+    environment:
+      POSTGRES_USER: flourish
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro

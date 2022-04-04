@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    container_name: test_api
+    environment: 
+      PG_CONN_STRING: postgresql://flourish:password@db:5432/flourish_test
+      PORT: 5500
+    depends_on:
+      - db
+    tty: true
+  db:
+    container_name: test_db
+    environment:
+      POSTGRES_DB: flourish_test
+    volumes:
+      - test_data:/var/lib/postgresql/data
+volumes:
+  test_data:
+networks:
+  default:
+    name: test

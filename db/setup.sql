@@ -6,7 +6,8 @@ CREATE TABLE users (
     passwrd varchar(10000),
     rating float,
     rating_num int,
-    location varchar(7),
+    longitude float,
+    latitude float,
     radius float
 );
 
@@ -22,7 +23,8 @@ CREATE TABLE products (
   description varchar(100),
   image varchar(500),
   is_retail boolean NOT NULL,
-  location varchar(7),
+  longitude float,
+  latitude float,
   price float,
   expiry varchar(15),
   date_time DATE DEFAULT CURRENT_TIMESTAMP,
@@ -50,15 +52,13 @@ CREATE TABLE productRatings (
   rating INT
 );
  
-INSERT INTO category(category_name) VALUES ('Meat');
-INSERT INTO category(category_name) VALUES ('Veg');
+INSERT INTO category(category_name) VALUES ('Bakery');
+INSERT INTO category(category_name) VALUES ('Dairy');
+INSERT INTO category(category_name) VALUES ('Eggs');
+INSERT INTO category(category_name) VALUES ('Fish');
 INSERT INTO category(category_name) VALUES ('Fruit');
-INSERT INTO users(username, email, passwrd, rating, rating_num, location, radius) VALUES ('zahra', 'zahra@email.co.uk', 'pass123', 5.0, 10, 'SE18', 2);
-INSERT INTO products(user_id, category_id, is_retail, location, price, expiry, description, image) VALUES (1, 2, True, 'SE18', 2.99, '03/04/2022', 'Tomatoes', 'LINK');
-INSERT INTO productratings(product_id, user_id, rating) VALUES (1, 1, 1);
+INSERT INTO category(category_name) VALUES ('Meat');
+INSERT INTO category(category_name) VALUES ('Vegtables');
+INSERT INTO category(category_name) VALUES ('Other');
 
-INSERT INTO users(username, email, passwrd, rating, rating_num, location, radius) VALUES ('test2', 'test2@email.co.uk', 'pass123', 0, 0, 'SE18', 2);
-INSERT INTO users(username, email, passwrd, rating, rating_num, location, radius) VALUES ('test3', 'test3@email.co.uk', 'pass123', 0, 0, 'SE18', 2);
-
-INSERT INTO products(user_id, category_id, is_retail, location, price, expiry, description, image) VALUES (3, 2, True, 'SE18', 2.99, '03/04/2022', 'Broccoli', 'LINK');
-INSERT INTO products(user_id, category_id, is_retail, location, price, expiry, description, image) VALUES (3, 2, True, 'SE18', 2.99, '03/04/2022', 'Onion', 'LINK');
+INSERT INTO users(username, email, passwrd, rating, rating_num, longitude, latitude radius) VALUES ('test', 'test@email.co.uk', 'password123', 5.0, 10, 51.5014, 0.1419, 2);

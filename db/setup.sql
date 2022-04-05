@@ -25,6 +25,7 @@ CREATE TABLE products (
   location varchar(7),
   price float,
   expiry varchar(15),
+  date_time DATE DEFAULT CURRENT_TIMESTAMP,
   user_id INT,
   FOREIGN KEY(user_id)
         REFERENCES users(id)

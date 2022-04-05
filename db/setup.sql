@@ -5,7 +5,6 @@ CREATE TABLE users (
     email varchar(100) UNIQUE,
     passwrd varchar(10000),
     rating float,
-    rating_num int,
     longitude float,
     latitude float,
     radius float
@@ -61,4 +60,4 @@ INSERT INTO category(category_name) VALUES ('Meat');
 INSERT INTO category(category_name) VALUES ('Vegtables');
 INSERT INTO category(category_name) VALUES ('Other');
 
-INSERT INTO users(username, email, passwrd, rating, rating_num, longitude, latitude radius) VALUES ('test', 'test@email.co.uk', 'password123', 5.0, 10, 51.5014, 0.1419, 2);
+INSERT INTO users(username, email, passwrd, rating, longitude, latitude, radius) VALUES ('test', 'test@email.co.uk', 'password123', 5.0, 51.5014, 0.1419, 2);

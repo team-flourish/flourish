@@ -13,7 +13,8 @@ CREATE TABLE users (
 DROP TABLE IF EXISTS category;
 CREATE TABLE category (
   category_id serial PRIMARY KEY,
-  category_name varchar(100)
+  category_name varchar(100),
+  color varchar(7)
 );
 
 DROP TABLE IF EXISTS products;
@@ -51,13 +52,13 @@ CREATE TABLE productRatings (
   rating INT
 );
  
-INSERT INTO category(category_name) VALUES ('Bakery');
-INSERT INTO category(category_name) VALUES ('Dairy');
-INSERT INTO category(category_name) VALUES ('Eggs');
-INSERT INTO category(category_name) VALUES ('Fish');
-INSERT INTO category(category_name) VALUES ('Fruit');
-INSERT INTO category(category_name) VALUES ('Meat');
-INSERT INTO category(category_name) VALUES ('Vegtables');
-INSERT INTO category(category_name) VALUES ('Other');
+INSERT INTO category(category_name, color) VALUES ('Bakery', '#E3914A');
+INSERT INTO category(category_name, color) VALUES ('Dairy', '#CBBC95');
+INSERT INTO category(category_name, color) VALUES ('Eggs', '#FFBC0F');
+INSERT INTO category(category_name, color) VALUES ('Fish', '#2AD0D0');
+INSERT INTO category(category_name, color) VALUES ('Fruit', '#D02A66');
+INSERT INTO category(category_name, color) VALUES ('Meat', '#FF3E3E');
+INSERT INTO category(category_name, color) VALUES ('Vegtables', '#37D02A');
+INSERT INTO category(category_name, color) VALUES ('Other', '#808080');
 
 INSERT INTO users(username, email, passwrd, rating, longitude, latitude, radius) VALUES ('test', 'test@email.co.uk', 'password123', 5.0, 51.5014, 0.1419, 2);

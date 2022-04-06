@@ -58,7 +58,7 @@ INSERT INTO category(category_name, color) VALUES ('Eggs', '#FFBC0F');
 INSERT INTO category(category_name, color) VALUES ('Fish', '#2AD0D0');
 INSERT INTO category(category_name, color) VALUES ('Fruit', '#D02A66');
 INSERT INTO category(category_name, color) VALUES ('Meat', '#FF3E3E');
-INSERT INTO category(category_name, color) VALUES ('Vegtables', '#37D02A');
+INSERT INTO category(category_name, color) VALUES ('Veg', '#37D02A');
 INSERT INTO category(category_name, color) VALUES ('Other', '#808080');
 
 INSERT INTO users(username, email, passwrd, rating, longitude, latitude, radius) VALUES ('test', 'test@email.co.uk', 'password123', 5.0, 51.5014, 0.1419, 2);
